@@ -5,9 +5,17 @@
   <artifactId>sas</artifactId>
   <version>1.0.0</version>
   <packaging>war</packaging>
+
+  <!-- ScalaのVersionは可変にできるようにしとく -->
+  <properties>
+      <scala-version>2.9.2</scala-version>
+  </properties>
+
   <description/>
   <build>
     <finalName>sas</finalName>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>src/test/scala</testSourceDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -100,6 +108,20 @@
           </additionalProjectnatures>
         </configuration>
       </plugin>
+
+      <!-- scala -->
+      <plugin>
+          <groupId>org.scala-tools</groupId>
+          <artifactId>maven-scala-plugin</artifactId>
+          <executions>
+              <execution>
+                  <id>test-compile</id>
+                  <goals>
+                      <goal>testCompile</goal>
+                  </goals>
+              </execution>
+          </executions>
+      </plugin>
     </plugins>
   </build>
   <pluginRepositories>
@@ -122,6 +144,14 @@
     </repository>
   </repositories>
   <dependencies>
+    <!-- Dependencyの設定はこんな感じ -->
+    <dependency>
+        <groupId>org.scala-lang</groupId>
+        <artifactId>scala-compiler</artifactId>
+        <version>${scala-version}</version>
+        <scope>test</scope>
+    </dependency>
+
     <dependency>
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
