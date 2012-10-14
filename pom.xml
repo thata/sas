@@ -115,6 +115,12 @@
           <artifactId>maven-scala-plugin</artifactId>
           <executions>
               <execution>
+                  <id>compile</id>
+                  <goals>
+                    <goal>compile</goal>
+                  </goals>
+              </execution>
+              <execution>
                   <id>test-compile</id>
                   <goals>
                       <goal>testCompile</goal>
@@ -150,6 +156,11 @@
         <artifactId>scala-compiler</artifactId>
         <version>${scala-version}</version>
         <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.scala-lang</groupId>
+        <artifactId>scala-library</artifactId>
+        <version>${scala-version}</version>
     </dependency>
 
     <dependency>
