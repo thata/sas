@@ -8,7 +8,6 @@ import javax.persistence.GenerationType;
 
 @Entity(name = "users")
 public class User implements Serializable {
-    // @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_id")
     @Id
     @GeneratedValue
     public Integer id;
