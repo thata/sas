@@ -303,6 +303,11 @@
       <artifactId>jetty-maven-plugin</artifactId>
       <version>8.1.5.v20120716</version>
     </dependency>
+    <dependency>
+      <groupId>postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>8.3-603.jdbc4</version>
+    </dependency>
   </dependencies>
 </project>
 
