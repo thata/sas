@@ -73,19 +73,17 @@
 	-->
 	
 	<!-- for PostgreSQL -->
-	<!--
 	<component name="xaDataSource"
 		class="org.seasar.extension.dbcp.impl.XADataSourceImpl">
 		<property name="driverClassName">
 			"org.postgresql.Driver"
         </property>
         <property name="URL">
-          "jdbc:postgresql://localhost/TEST"
+          "jdbc:postgresql://localhost/mydb"
         </property>
-        <property name="user">"xxxx"</property>
-        <property name="password">"xxxx"</property>
+        <property name="user">"thata"</property>
+        <property name="password">""</property>
     </component>
-    -->
 
 	<!-- MySQL
 	- MySQL4.0以下でマルチバイト文字を扱う場合には，URL指定の後に，

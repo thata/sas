@@ -1,6 +1,6 @@
 package com.example.sample.sas.service;
 
-import com.example.sample.sas.entity.User
+import com.example.sample.sas.entity.User;
 import org.seasar.extension.jdbc.service.S2AbstractService;
 
 public class UserService extends S2AbstractService<User> {
