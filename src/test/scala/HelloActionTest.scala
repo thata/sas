@@ -15,5 +15,9 @@ class HelloActionTest {
   def testHello {
     assertTrue("is true?", true)
   }
+  @Test
+  def testHelloAgain {
+    assertNotNull(new Book())
+  }
 }
 
