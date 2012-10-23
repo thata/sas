@@ -8,17 +8,23 @@ import java.util.List;
 public class IndexAction
 {
   public List users;
+  public List books;
   public UserService userService;
+  public BookService bookService;
 
     @Execute(validator = false)
     public String index()
     {
-      User user = new User();
-      user.name = "thata";
-      user.age = 17;
-      userService.insert(user);
+      // User user = new User();
+      // user.name = "thata";
+      // user.age = 17;
+      // userService.insert(user);
+
+      Book book = new Book();
+      bookService.insert(book);
 
       users = userService.findAll();
-        return "index.jsp";
+      books = bookService.findAll();
+      return "index.jsp";
     }
 }

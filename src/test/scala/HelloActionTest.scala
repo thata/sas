@@ -1,6 +1,19 @@
-package com.example.sample.sas.action
+package com.example.sample.sas.service
 
-class HelloActionTest
-{
-    def index = "index.jsp"
+import com.example.sample.sas.entity
+import org.junit.Test
+import org.junit.Assert._
+import org.junit.runner.RunWith
+import org.seasar.extension.jdbc.JdbcManager
+import org.seasar.framework.unit.Seasar2
+
+@RunWith(classOf[Seasar2])
+class HelloActionTest {
+  var bookService:BookService = _
+//  var book:Book = _
+  @Test
+  def testHello {
+    assertTrue("is true?", true)
+  }
 }
+
